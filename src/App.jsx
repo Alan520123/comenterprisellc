@@ -5,6 +5,7 @@ import AboutPage from "./AboutPage";
 import ServicesPage from "./ServicesPage";
 import ProjectsPage from "./ProjectsPage";
 import Footer from "./Footer";
+import ContactUsPage from "./ContactUsPage";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -16,9 +17,11 @@ const App = () => {
       case "about":
         return <AboutPage />;
       case "services":
-        return <ServicesPage />;
+        return <ServicesPage setCurrentPage={setCurrentPage} />;
       case "projects":
         return <ProjectsPage />;
+      case "contactUs":
+        return <ContactUsPage />;
       default:
         return <HomePage setCurrentPage={setCurrentPage} />;
     }

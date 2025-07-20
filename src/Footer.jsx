@@ -5,7 +5,9 @@ const Footer = ({ setCurrentPage }) => {
   const navigation = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
-    { id: "projects", label: "Services" },
+    { id: "services", label: "Services" },
+    { id: "projects", label: "Projects" },
+    { id: "contactUs", label: "Contact Us" }
   ];
 
   return (
