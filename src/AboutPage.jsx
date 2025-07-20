@@ -1,4 +1,8 @@
 import React from "react";
+import normaImg from "./Assets/Team/Norma President CEO/IMG_1188.JPG";
+import benitoSeniorImg from "./Assets/Team/Benito Senior PM/Attachment.jpg";
+import benitoAssistantImg from "./Assets/Team/Benito Assistant PM/IMG_9825.jpg";
+import romeoImg from "./Assets/Team/Romeo Field Manager/attachment1681946979861.jpg";
 
 const AboutPage = () => {
   return (
@@ -12,7 +16,6 @@ const AboutPage = () => {
             Building Texas infrastructure responsibly since our founding
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
             <img
@@ -47,7 +50,6 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-
         <div className="bg-white rounded-xl p-8 shadow-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             What Sets Us Apart
@@ -96,8 +98,50 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
+      <section className="mt-24">
+        <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Our Team</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
+          {[
+            {
+              name: "Norma",
+              title: "President & CEO",
+              image: normaImg,
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex. Mauris dapibus risus quis suscipit vulputate.",
+            },
+            {
+              name: "Benito",
+              title: "Senior Project Manager",
+              image: benitoSeniorImg,
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex. Mauris dapibus risus quis suscipit vulputate.",
+            },
+            {
+              name: "Benito",
+              title: "Assistant Project Manager",
+              image: benitoAssistantImg,
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex. Mauris dapibus risus quis suscipit vulputate.",
+            },
+            {
+              name: "Romeo",
+              title: "Field Manager",
+              image: romeoImg,
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex. Mauris dapibus risus quis suscipit vulputate.",
+            }
+          ].map((member, idx) => (
+            <div key={idx} className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-40 h-40 object-cover rounded-full mb-4 border-4 border-blue-600 shadow"
+              />
+              <h3 className="text-2xl font-bold text-gray-900 mb-1">{member.name}</h3>
+              <h4 className="text-blue-600 font-semibold mb-3">{member.title}</h4>
+              <p className="text-gray-600 text-center text-sm">{member.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
-};
+}
 
 export default AboutPage;
