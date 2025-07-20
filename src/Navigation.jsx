@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "./Assets/Logo-backgroundremoved.png";
 
 const Navigation = ({ currentPage, setCurrentPage }) => {
   const navigation = [
@@ -13,9 +14,16 @@ const Navigation = ({ currentPage, setCurrentPage }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold text-blue-600">
-              COM ENTERPRISE
-            </span>
+            <div className="flex items-center space-x-3">
+              <img 
+                src={logo}
+                alt="COM Enterprise Logo" 
+                className="w-16 h-16 rounded-lg"
+              />
+              <span className="text-2xl font-bold text-blue-600">
+                COM ENTERPRISE
+              </span>
+            </div>
           </div>
           <div className="hidden md:block">
             <div className="flex space-x-8">
