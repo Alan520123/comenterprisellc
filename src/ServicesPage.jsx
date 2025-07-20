@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Building,
   Hammer,
@@ -9,7 +8,7 @@ import {
   Users,
 } from "lucide-react";
 
-const ServicesPage = () => {
+const ServicesPage = ({ setCurrentPage }) => {
   const services = [
     {
       id: 1,
@@ -141,7 +140,10 @@ const ServicesPage = () => {
               Contact us today for a consultation and let's build something
               great together.
             </p>
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
+            <button
+              className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+              onClick={() => setCurrentPage && setCurrentPage('contactUs')}
+            >
               Get In Touch
             </button>
           </div>
