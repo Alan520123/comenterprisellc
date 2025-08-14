@@ -53,7 +53,7 @@ const HomePage = ({ setCurrentPage }) => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
-                  onClick={() => setCurrentPage("projects")}
+                  onClick={() => setCurrentPage("services")}
                   className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   View Services <ChevronRight className="inline ml-2 w-5 h-5" />
