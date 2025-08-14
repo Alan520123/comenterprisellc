@@ -141,7 +141,7 @@ const ServicesPage = ({ setCurrentPage }) => {
               great together.
             </p>
             <button
-              className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+              className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 cursor-pointer"
               onClick={() => setCurrentPage && setCurrentPage('contactUs')}
             >
               Get In Touch
