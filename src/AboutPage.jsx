@@ -1,8 +1,7 @@
-import React from "react";
-import normaImg from "./Assets/Team/Norma President CEO/IMG_1188.JPG";
-import benitoSeniorImg from "./Assets/Team/Benito Senior PM/Attachment.jpg";
-import benitoAssistantImg from "./Assets/Team/Benito Assistant PM/IMG_9825.jpg";
-import romeoImg from "./Assets/Team/Romeo Field Manager/attachment1681946979861.jpg";
+import normaImg from "./Assets/Team/Norma President CEO/Cropped160x160.jpg";
+import benitoSeniorImg from "./Assets/Team/Benito Senior PM/Cropped160x160.jpg";
+import benitoAssistantImg from "./Assets/Team/Benito Assistant PM/Cropped160x160.jpg";
+import stockImg from "./Assets/stock.svg";
 
 const AboutPage = () => {
   return (
@@ -103,38 +102,38 @@ const AboutPage = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
           {[
             {
-              name: "Norma",
+              name: "Norma Villafranca",
               title: "President & CEO",
               image: normaImg,
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex. Mauris dapibus risus quis suscipit vulputate.",
+              description: "Norma Le Villafranca is a respected and a proven leader of over 25 years in Business Consultant & Advisory Services. As President, Norma is responsible for all the business operations including client relations.",
             },
             {
-              name: "Benito",
+              name: "Benito Valdelamar",
               title: "Senior Project Manager",
               image: benitoSeniorImg,
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex. Mauris dapibus risus quis suscipit vulputate.",
+              description: "Benito Valdelamar has over 20 years of commercial construction. Benito is responsible for all aspects of daily managing and coordinating new building design and construction. He oversees the completion of all major commercial renovations, build-to-suit and major tenant finish-outs. He is responsible for tracking and completing concepts from beginning to end.",
             },
             {
-              name: "Benito",
+              name: "Benito Valdelamar Jr.",
               title: "Assistant Project Manager",
               image: benitoAssistantImg,
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex. Mauris dapibus risus quis suscipit vulputate.",
+              description: "Benito Valdelamar Jr., with instruction in commercial & industrial construction, is responsible for reviewing estimates from the conceptual stage through the final documents. He monitors the business cost estimating and bidding during the plan development. Additionally, he has over 4 years in Field Construction experience and effectively assists our Senior Project Manager.",
             },
             {
-              name: "Romeo",
-              title: "Field Manager",
-              image: romeoImg,
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex. Mauris dapibus risus quis suscipit vulputate.",
+              name: "Marshall Bowen",
+              title: "Project Manager & SR Estimator",
+              image: stockImg,
+              description: "Information about Marshall Bowen's role and experience will be updated soon.",
             }
           ].map((member, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+            <div key={idx} className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center w-72 mx-auto">
               <img
                 src={member.image}
                 alt={member.name}
                 className="w-40 h-40 object-cover rounded-full mb-4 border-4 border-blue-600 shadow"
               />
-              <h3 className="text-2xl font-bold text-gray-900 mb-1">{member.name}</h3>
-              <h4 className="text-blue-600 font-semibold mb-3">{member.title}</h4>
+              <h3 className="text-2xl font-bold text-gray-900 mb-1 whitespace-nowrap">{member.name}</h3>
+              <h4 className="text-blue-600 font-semibold mb-3 text-center">{member.title}</h4>
               <p className="text-gray-600 text-center text-sm">{member.description}</p>
             </div>
           ))}
