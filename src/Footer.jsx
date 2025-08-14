@@ -44,7 +44,7 @@ const Footer = ({ setCurrentPage }) => {
                 <li key={item.id}>
                   <button
                     onClick={() => setCurrentPage(item.id)}
-                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                    className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer"
                   >
                     {item.label}
                   </button>
