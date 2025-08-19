@@ -73,7 +73,7 @@ const Footer = ({ setCurrentPage }) => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; 2025 COM Enterprise, LLC. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} COM Enterprise, LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>
