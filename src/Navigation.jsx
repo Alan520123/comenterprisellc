@@ -31,7 +31,10 @@ const Navigation = ({ currentPage, setCurrentPage }) => {
               {navigation.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => setCurrentPage(item.id)}
+                  onClick={() => {
+                    setCurrentPage(item.id);
+                    window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top on page change
+                  }}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 cursor-pointer ${
                     currentPage === item.id
                       ? "text-blue-600 bg-blue-50"
@@ -76,6 +79,7 @@ const Navigation = ({ currentPage, setCurrentPage }) => {
                 key={item.id}
                 onClick={() => {
                   setCurrentPage(item.id);
+                  window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top on page change
                   setMenuOpen(false);
                 }}
                 className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors duration-300 cursor-pointer ${
